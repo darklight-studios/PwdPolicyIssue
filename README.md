@@ -8,7 +8,7 @@ The Password Policy issue checks that password policies (length, age, complexity
 
 ### Use
 
-1. Download the latest version from the [releases](https://github.com/darklight-studios/AuditingIssue/releases) section
+1. Download the latest version from the [releases](https://github.com/darklight-studios/PwdPolicyIssue/releases/) section
 2. Add DNCAuditingIssue.jar to your DNC build path
 3. Add `new PwdPolicyIssue()` to the initialized issues array in CoreEngine
 4. Start DNC!
