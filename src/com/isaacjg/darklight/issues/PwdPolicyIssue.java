@@ -41,9 +41,9 @@ public class PwdPolicyIssue extends Issue {
 	
 	@Override
 	public boolean isFixed() {
-		File seceditDump = new File(".", "secedit.txt");
+		File seceditDump = new File("secedit.txt");
 		try {
-			Process p = Runtime.getRuntime().exec("cmd.exe /c secedit /export /cfg " + seceditDump.getAbsolutePath());
+			Process p = Runtime.getRuntime().exec("cmd.exe /c secedit /export /cfg \"" + seceditDump.getAbsolutePath() + "\"");
 			p.waitFor();
 		} catch (InterruptedException | IOException e) {
 			e.printStackTrace();
