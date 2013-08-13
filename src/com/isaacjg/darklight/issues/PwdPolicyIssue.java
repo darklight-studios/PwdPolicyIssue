@@ -54,11 +54,17 @@ public class PwdPolicyIssue extends Issue {
 			int maxAge = Integer.parseInt(INIUtils.search("MaximumPasswordAge", dump));
 			int minLength = Integer.parseInt(INIUtils.search("MinimumPasswordLength", dump));
 			int complexity = Integer.parseInt(INIUtils.search("PasswordComplexity", dump));
+			int history = Integer.parseInt(INIUtils.search("PasswordHistorySize", dump));
+			int clearTextPwd = Integer.parseInt(INIUtils.search("ClearTextPassword", dump));
 			if (minAge > 4 && minAge < maxAge) {
 				if (maxAge >= 25) {
 					if (minLength >= 8) {
 						if (complexity == 1) {
-							return true;
+							if (history >= 3) {
+								if (clearTextPwd == 0) {
+									return true;
+								}
+							}
 						}
 					}
 				}
