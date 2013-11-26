@@ -4,7 +4,7 @@ Darklight Nova Core Issue: Password Policy
 Issue for [Darklight Nova Core](https://github.com/darklight-studios/darklight-nova-core)
 
 ### Function
-The Password Policy issue checks that password policies (length, age, complexity) have been set in Windows
+The Password Policy issue checks that password policies (length, age, complexity) have been set in Windows.
 
 ### Use
 
